@@ -151,7 +151,6 @@ orderRouter.put( '/:id/deliver', isAuth, isAdmin, expressAsyncHandler(async (req
                 rejectUnauthorized: false
               }
             });
-           // const output = payOrderEmailTemplate(order);
             const mailOptions ={
               from: 'AdeMotors <mystik5551@gmail.com>',
               to: `${order.user.name} <${order.user.email}>`,
